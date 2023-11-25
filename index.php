@@ -56,7 +56,7 @@ if (mysqli_num_rows($result) > 0) {
                         <form action='' method='post'>
                             <input type='hidden' name='pet' value='$row[petID]'>
                         <a href='animals/details.php?petID=$row[petID]' class='btn btn-primary'>Details</a>
-                        <input class='btn btn-warning' type='submit' value='Adopt' name='adopt'>
+                        <input class='btn btn-warning' type='submit' value='Take me home' name='adopt'>
                         </form>
                          ";
         } else {
