@@ -79,8 +79,8 @@ mysqli_close($conn);
 <body>
     <?php require_once '../components/navbar.php' ?>
 
-    <div class="container pt-5">
-        <a href="/php-my-files/BE20-CR5-ArberIslamaj/animals/allAnimals.php" class='btn btn-warning fw-bold'>Pets world</a>
+    <div class="container text-center pt-5">
+        <a href="/php-my-files/BE20-CR5-ArberIslamaj/animals/allAnimals.php" class='btn btn-warning fw-bold p-2 mb-5'>Pets world</a>
         <div class="row row-cols-1 row-cols-xl-3 row-cols-lg-3 row-cols-md-2 row-cols-sm-1 row-cols-xs-1">
             <?= $cards ?>
         </div>
