@@ -8,7 +8,9 @@ session_start();
 
 require_once 'components/db_connect.php';
 
-$sql = "SELECT * FROM `adoption` JOIN `animals` ON petID = adoption.fk_animal JOIN `users` ON users.userID = adoption.fk_user WHERE users.userID = $_SESSION[user]";
+$sql = "SELECT * FROM `adoption` 
+        JOIN `animals` ON adoption.fk_animal = animals.petID 
+        WHERE adoption.fk_user = $_SESSION[user]";
 $result = mysqli_query($conn, $sql);
 
 $cards = "";
