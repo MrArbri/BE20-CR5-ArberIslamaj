@@ -45,7 +45,7 @@ if (mysqli_num_rows($result) > 0) {
                     flex-wrap: wrap;
                     flex-direction: row;
                     border-radius: 0;'>
-                    <img src='../assets/$row[picture]' class='card-img-top object-fit-cover' style='height: 12rem' alt='Pet'>
+                    <img src='assets/$row[picture]' class='card-img-top object-fit-cover' style='height: 12rem' alt='Pet'>
                     <div class='card-body'>
                         <h5 class='card-title'>$row[name]</h5>
                         <p class='card-text'>Age: $row[age] years old</p>
