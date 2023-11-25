@@ -49,16 +49,18 @@ if (mysqli_num_rows($result) > 0) {
                     <div class='card-body'>
                         <h5 class='card-title'>$row[name]</h5>
                         <p class='card-text'>Age: $row[age] years old</p>
-                        <p class='card-text'>Status: $row[status] </p>
-                        <a href='animals/details.php?petID=$row[petID]' class='btn btn-primary'>Details</a>";
+                        <p class='card-text'>Status: $row[status] </p>";
 
         if (isset($_SESSION["user"])) {
             $cards .= "
                         <form action='' method='post'>
                             <input type='hidden' name='pet' value='$row[petID]'>
-                            <input class='btn btn-warning' type='submit' value='Adopt' name='adopt'>
+                        <a href='animals/details.php?petID=$row[petID]' class='btn btn-primary'>Details</a>
+                        <input class='btn btn-warning' type='submit' value='Adopt' name='adopt'>
                         </form>
                          ";
+        } else {
+            $cards .= "<a href='animals/details.php?petID=$row[petID]' class='btn btn-primary'>Details</a>";
         }
 
         $cards .= "</div>
