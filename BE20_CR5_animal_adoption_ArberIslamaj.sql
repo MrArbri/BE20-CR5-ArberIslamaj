@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Nov 25, 2023 at 05:24 PM
+-- Generation Time: Nov 25, 2023 at 07:09 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -44,7 +44,8 @@ INSERT INTO `adoption` (`id`, `fk_user`, `fk_animal`, `date`) VALUES
 (14, 1, 1, '2023-11-25 00:00:00'),
 (15, 3, 5, '2023-11-25 00:00:00'),
 (16, 4, 9, '2023-11-25 00:00:00'),
-(17, 5, 12, '2023-11-25 00:00:00');
+(17, 5, 12, '2023-11-25 00:00:00'),
+(18, 1, 23, '2023-11-25 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -82,7 +83,7 @@ INSERT INTO `animals` (`petID`, `name`, `picture`, `location`, `description`, `s
 (10, 'Oliver', '65620ea546ce2.jpg', 'Wien Street 10', 'Charming and mischievous cat', 'small', 11, 'Yes', 'British Shorthair', 'available'),
 (11, 'Coco', '65620f87de82c.jpg', 'Wien Street 11', 'Playful and friendly parrot', 'small', 6, 'Yes', 'Budgerigar', 'available'),
 (12, 'Nala', '65621038890f1.jpg', 'Wien Street 12', '', 'medium', 8, 'Yes', 'Persian', 'adopted'),
-(23, 'Animal to delete', 'pet.png', 'Favoritenstrasse 15', 'Please delete me to test the functionality!\r\nI am not vaccinated!', 'medium', 2, 'no', 'Happy animal', 'available');
+(23, 'Animal to delete', 'pet.png', 'Favoritenstrasse 15', ' Please delete me to test the functionality! I am not vaccinated!', 'medium', 2, 'Yes', 'Happy animal', 'adopted');
 
 -- --------------------------------------------------------
 
@@ -145,7 +146,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `adoption`
 --
 ALTER TABLE `adoption`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- AUTO_INCREMENT for table `animals`

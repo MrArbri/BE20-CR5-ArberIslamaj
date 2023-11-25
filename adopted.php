@@ -64,6 +64,12 @@ mysqli_close($conn);
             flex-direction: column;
         }
 
+        .card:hover {
+            box-shadow: 0px 0px 10px 5px black;
+            transform: scale(1.03);
+            font-size: larger;
+        }
+
         footer {
             margin-top: auto;
         }
