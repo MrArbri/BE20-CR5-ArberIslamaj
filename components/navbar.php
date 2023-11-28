@@ -56,8 +56,37 @@ if (isset($_SESSION["adm"])) {
 echo "    <li class='nav-item'>
               <a class='nav-link active fw-bold' href='/php-my-files/BE20-CR5-ArberIslamaj/animals/seniors.php'>Seniors</a>
           </li>
+          </li>
           </div>
-        </div>
-      </div>
-    </nav>
-";
+        ";
+
+if (isset($_SESSION["user"]) || isset($_SESSION["adm"])) {
+
+  $userId = $_SESSION["user"] ?? $_SESSION["adm"];
+  $sql = "SELECT `firstName`, `picture` FROM `users` WHERE `userID` = ?";
+
+  $statement = mysqli_prepare($conn, $sql);
+  mysqli_stmt_bind_param($statement, "i", $userId);
+  mysqli_stmt_execute($statement);
+
+  $result = mysqli_stmt_get_result($statement);
+
+  if ($result) {
+    $row = mysqli_fetch_assoc($result);
+
+    echo "
+        <li class='nav-item ms-auto list-unstyled'>
+          <span class='me-2 fw-bold'>{$row['firstName']}</span>
+  
+          <img src='/php-my-files/BE20-CR5-ArberIslamaj/assets/{$row['picture']}' class='card-img-top object-fit-cover' 
+          style='height: 2.5rem; width: 2.5rem; border-radius: 50%' alt='User Picture'>
+          
+        </li>";
+  }
+
+  mysqli_stmt_close($statement);
+}
+
+echo "</div>
+    </div>
+  </nav>";
