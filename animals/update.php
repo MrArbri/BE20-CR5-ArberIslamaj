@@ -11,7 +11,7 @@ if (!isset($_SESSION["user"]) && !isset($_SESSION["adm"])) {
 }
 
 if (isset($_SESSION["user"])) {
-    header("Location: /php-my-files/BE20-CR5-ArberIslamaj/index.php");
+    header("Location: ./index.php");
 }
 
 require_once '../components/db_connect.php';
@@ -67,7 +67,7 @@ if (isset($_POST["create"])) {
                 Animal updated!
             </div>";
 
-        header('refresh: 2; url= /php-my-files/BE20-CR5-ArberIslamaj/animals/animals_dashboard.php');
+        header('refresh: 2; url= ./animals/animals_dashboard.php');
     } else {
         echo "
             <div class='alert alert-danger' role='alert'>

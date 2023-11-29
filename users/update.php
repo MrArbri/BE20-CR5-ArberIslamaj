@@ -75,7 +75,7 @@ if (isset($_POST["update"])) {
             <div class='alert alert-success' role='alert'>
                 User updated!
             </div>";
-            header('refresh: 2; url= /php-my-files/BE20-CR5-ArberIslamaj/index.php');
+            header('refresh: 2; url= ./index.php');
         } else {
             echo "
                 <div class='alert alert-danger' role='alert'>

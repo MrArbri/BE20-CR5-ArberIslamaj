@@ -11,7 +11,7 @@ if (!isset($_SESSION["user"]) && !isset($_SESSION["adm"])) {
 }
 
 if (isset($_SESSION["user"])) {
-    header("Location: /php-my-files/BE20-CR5-ArberIslamaj/index.php");
+    header("Location: ./index.php");
 }
 
 require_once '../components/db_connect.php';
@@ -30,8 +30,8 @@ if (isset($_GET["petID"]) && !empty($_GET["petID"])) {
     $sql = "DELETE FROM `animals` WHERE `petID` = $id";
     mysqli_query($conn, $sql);
 
-    header("Location: /php-my-files/BE20-CR5-ArberIslamaj/animals/animals_dashboard.php");
+    header("Location: ./animals/animals_dashboard.php");
 } else {
     mysqli_close($conn);
-    header("Location: /php-my-files/BE20-CR5-ArberIslamaj/index.php");
+    header("Location: ./index.php");
 }

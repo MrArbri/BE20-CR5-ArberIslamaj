@@ -11,7 +11,7 @@ if (!isset($_SESSION["user"]) && !isset($_SESSION["adm"])) {
 }
 
 if (isset($_SESSION["user"])) {
-    header("Location: /php-my-files/BE20-CR5-ArberIslamaj/index.php");
+    header("Location: ./index.php");
 }
 
 require_once '../components/db_connect.php';

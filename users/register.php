@@ -63,7 +63,7 @@ if (isset($_POST["register"])) {
             <div class='alert alert-success' role='alert'>
                 New user created!
             </div>";
-            header('refresh: 2; url= /php-my-files/BE20-CR5-ArberIslamaj/users/login.php');
+            header('refresh: 2; url= ./users/login.php');
         } else {
             echo "
                 <div class='alert alert-danger' role='alert'>

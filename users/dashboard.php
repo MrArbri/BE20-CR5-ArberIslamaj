@@ -11,7 +11,7 @@ if (!isset($_SESSION["user"]) && !isset($_SESSION["adm"])) {
 }
 
 if (!isset($_SESSION["adm"])) {
-    header("Location: /php-my-files/BE20-CR5-ArberIslamaj/index.php");
+    header("Location: ./index.php");
 }
 
 require_once '../components/db_connect.php';
@@ -28,7 +28,7 @@ if (mysqli_num_rows($result) > 0) {
                     <th scope='row'>$row[userID]</th>
                     <td>$row[email]</td>
                     <td>$row[picture]</td>
-                    <td><a href='/php-my-files/BE20-CR5-ArberIslamaj/users/update.php?userID=$row[userID]' class='btn btn-warning'>Update</a></td>
+                    <td><a href='./users/update.php?userID=$row[userID]' class='btn btn-warning'>Update</a></td>
                 </tr>
             ";
     }

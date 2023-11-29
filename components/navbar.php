@@ -8,7 +8,7 @@ echo "
     <nav class='navbar navbar-expand-lg bg-warning border'>
       <div class='container-fluid'>
 
-        <a class='navbar-brand fw-bold' href='/php-my-files/BE20-CR5-ArberIslamaj/animals/allAnimals.php'>PETS WORLD</a>
+        <a class='navbar-brand fw-bold' href='./animals/allAnimals.php'>PETS WORLD</a>
 
         <button class='navbar-toggler' type='button' data-bs-toggle='collapse' data-bs-target='#navbarNavAltMarkup'     aria-controls='navbarNavAltMarkup'aria-expanded='false'    aria-label='Toggle navigation'>
           <span class='navbar-toggler-icon'></span>
@@ -17,44 +17,44 @@ echo "
           <div class='navbar-nav'>
           
             <a class='nav-link active fw-bold' aria-current='page' 
-            href='/php-my-files/BE20-CR5-ArberIslamaj/index.php'>Home</a>
+            href='./index.php'>Home</a>
       ";
 if (isset($_SESSION["user"])) {
   echo " <li class='nav-item'>
-      <a class='nav-link active fw-bold' href='/php-my-files/BE20-CR5-ArberIslamaj/adopted.php'>My pets</a>
+      <a class='nav-link active fw-bold' href='./adopted.php'>My pets</a>
   </li>";
 }
 
 if (isset($_SESSION["user"]) || isset($_SESSION["adm"])) {
   echo " <li class='nav-item'>
-              <a class='nav-link active fw-bold' href='/php-my-files/BE20-CR5-ArberIslamaj/users/logout.php'>Logout</a>
+              <a class='nav-link active fw-bold' href='./users/logout.php'>Logout</a>
           </li>
           <li class='nav-item'>
-              <a class='nav-link active fw-bold' href='/php-my-files/BE20-CR5-ArberIslamaj/users/update.php'>Update user</a>
+              <a class='nav-link active fw-bold' href='./users/update.php'>Update user</a>
           </li>
        ";
 } else {
   echo "<li class='nav-item'>
-              <a class='nav-link active fw-bold' href='/php-my-files/BE20-CR5-ArberIslamaj/users/register.php'>Register</a>
+              <a class='nav-link active fw-bold' href='./users/register.php'>Register</a>
           </li>
           <li class='nav-item'>
-              <a class='nav-link active fw-bold' href='/php-my-files/BE20-CR5-ArberIslamaj/users/login.php'>Login</a>
+              <a class='nav-link active fw-bold' href='./users/login.php'>Login</a>
           </li>";
 }
 if (isset($_SESSION["adm"])) {
   echo "<li class='nav-item'>
-              <a class='nav-link active fw-bold' href='/php-my-files/BE20-CR5-ArberIslamaj/animals/create.php'>Create</a>
+              <a class='nav-link active fw-bold' href='./animals/create.php'>Create</a>
           </li>
           <li class='nav-item'>
-              <a class='nav-link active fw-bold' href='/php-my-files/BE20-CR5-ArberIslamaj/users/dashboard.php'>User Dashboard</a>
+              <a class='nav-link active fw-bold' href='./users/dashboard.php'>User Dashboard</a>
           </li>
           <li class='nav-item'>
-              <a class='nav-link active fw-bold' href='/php-my-files/BE20-CR5-ArberIslamaj/animals/animals_dashboard.php'>
+              <a class='nav-link active fw-bold' href='./animals/animals_dashboard.php'>
               Animals Dashboard</a>
           </li>";
 }
 echo "    <li class='nav-item'>
-              <a class='nav-link active fw-bold' href='/php-my-files/BE20-CR5-ArberIslamaj/animals/seniors.php'>Seniors</a>
+              <a class='nav-link active fw-bold' href='./animals/seniors.php'>Seniors</a>
           </li>
           </li>
           </div>
@@ -78,7 +78,7 @@ if (isset($_SESSION["user"]) || isset($_SESSION["adm"])) {
         <li class='nav-item ms-auto list-unstyled'>
           <span class='me-2 fw-bold'>{$row['firstName']}</span>
   
-          <img src='/php-my-files/BE20-CR5-ArberIslamaj/assets/{$row['picture']}' class='card-img-top object-fit-cover' 
+          <img src='assets/{$row['picture']}' class='card-img-top object-fit-cover' 
           style='height: 2.5rem; width: 2.5rem; border-radius: 50%' alt='User Picture'>
           
         </li>";

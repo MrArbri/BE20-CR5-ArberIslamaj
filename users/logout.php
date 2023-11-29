@@ -12,4 +12,4 @@ unset($_SESSION["adm"]);
 session_unset();
 session_destroy();
 
-header("Location: /php-my-files/BE20-CR5-ArberIslamaj/users/login.php");
+header("Location: ./users/login.php");

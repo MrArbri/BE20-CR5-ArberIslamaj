@@ -7,7 +7,7 @@ error_reporting(E_ALL);
 session_start();
 
 if (isset($_SESSION["user"]) || (isset($_SESSION["adm"]))) {
-    header("Location: /php-my-files/BE20-CR5-ArberIslamaj/user/login.php");
+    header("Location: ./user/login.php");
 }
 
 require_once '../components/db_connect.php';
@@ -45,10 +45,10 @@ if (isset($_POST["login"])) {
 
             if ($row["source"] === "user") {
                 $_SESSION["user"] = $row["userID"];
-                header("Location: /php-my-files/BE20-CR5-ArberIslamaj/index.php");
+                header("Location: ./index.php");
             } elseif ($row["source"] === "adm") {
                 $_SESSION["adm"] = $row["userID"];
-                header("Location: /php-my-files/BE20-CR5-ArberIslamaj/animals/animals_dashboard.php");
+                header("Location: ./animals/animals_dashboard.php");
             }
         } else {
             echo "  <div class='alert alert-danger' role='alert'>
